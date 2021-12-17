@@ -1,0 +1,225 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+Dark cyan: hsl(185, 75%, 39%)
+Very dark desaturated blue: hsl(229, 23%, 23%)
+Dark grayish blue: hsl(227, 10%, 46%)
+
+### Neutral
+
+Dark gray: hsl(0, 0%, 59%)
+
+## Typography
+
+### Body Copy
+
+- Font size (name and stats): 18px
+
+### Font
+
+- Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
+- Weights: 400, 700
+*/
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: 'Kumbh Sans', sans-serif;
+	background-color: #19a2ae;
+	opacity: 1;
+}
+.main {
+	position: relative;
+}
+.container {
+	margin-top: 10rem;
+	display: flex;
+	justify-content: center;
+}
+.pattern {
+	background-repeat: no-repeat;
+	height: 60rem;
+	width: 60rem;
+	position: absolute;
+}
+.pattern-top {
+	background-image: url(images/bg-pattern-top.svg);
+	top: 0;
+	left: 0;
+	transform: translateY(-25%) rotate(3.142rad);
+}
+.pattern-bottom {
+	background-image: url(images/bg-pattern-bottom.svg);
+	bottom: 0;
+	right: 0;
+	transform: translateY(34%);
+}
+.article {
+	z-index: 10000;
+	width: 30rem;
+	display: grid;
+	grid-template-rows: 4fr 6fr;
+}
+.box-img {
+	position: relative;
+	border-top-left-radius: 0.8rem;
+	border-top-right-radius: 0.8rem;
+}
+.background {
+	background-image: url(images/bg-pattern-card.svg);
+	height: 100%;
+	border-top-left-radius: 0.8rem;
+	border-top-right-radius: 0.8rem;
+}
+.img-victor {
+	position: absolute;
+	bottom: 0;
+	right: 50%;
+	transform: translate(50%, 50%);
+	border-radius: 100000px;
+	border: 4px solid #fff;
+}
+.text-box {
+	padding: 4.8rem;
+	padding-bottom: 1.6rem;
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	border-bottom-left-radius: 0.8rem;
+	border-bottom-right-radius: 0.8rem;
+}
+.user {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	gap: 0.8rem;
+	margin-top: 1.2rem;
+	font-size: 1.2rem;
+}
+.user-name {
+	font-weight: 700;
+	color: #2d3248;
+}
+.age {
+	color: #6a6f81;
+	font-weight: 700;
+	font-size: 1.4rem;
+}
+.city {
+	text-align: center;
+	color: #6a6f81;
+	font-size: 1.2rem;
+	font-weight: 400;
+}
+.stats-box {
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid #2d3248;
+	padding-top: 1.2rem;
+	margin-top: 2.4rem;
+}
+.stats {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.4rem;
+}
+.stat {
+	color: #2d3248;
+	font-weight: 700;
+	font-size: 1.6rem;
+}
+.stat-text {
+	color: #6a6f81;
+	font-weight: 400;
+	font-size: 0.8rem;
+}
+@media (max-width: 41em) {
+	.pattern {
+		height: 30rem;
+		width: 30rem;
+	}
+	.pattern-top {
+		transform: translateY(-55%) rotate(3.142rad);
+	}
+	.pattern-bottom {
+		transform: translateY(36%);
+		height: 40rem;
+	}
+	.container {
+		margin-top: 16rem;
+	}
+}
+/* MODAL COMPONENT AND HOW IT WORKS, BELOW */
+.attribution {
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	transform: translate(50%, -50%);
+	background-color: #fff;
+	border: 1px solid #000;
+}
+.attribution a:link,
+.attribution a:visited {
+	color: #000;
+	font-weight: 700;
+	text-decoration: none;
+}
+.hendrick-info {
+	position: relative;
+	padding: 4.8rem;
+}
+.hendrick-details {
+	display: flex;
+	flex-direction: column;
+	gap: 1.8rem;
+}
+.socials {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+}
+.social {
+	font-size: 1.8rem;
+}
+.close {
+	position: absolute;
+	right: 0;
+	top: 0;
+	transform: translate(-50%, 50%);
+	background-color: transparent;
+	border: none;
+	font-size: 2.4rem;
+	cursor: pointer;
+	outline: none;
+}
+.close:focus {
+	box-shadow: 0 0 0 0.05rem #000;
+}
+.blur {
+	filter: blur(0.5rem);
+	pointer-events: none;
+}
+.opacity-medium {
+	opacity: 0.5;
+}
+.opacity-min {
+	opacity: 1;
+}
